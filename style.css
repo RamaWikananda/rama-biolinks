@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(22, 33, 84);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "outfit", sans-serif;
+  padding-top: 4rem;
+  gap: 1rem;
+}
+
+.my-foto {
+  width: 10rem;
+  border-radius: 50%;
+  aspect-ratio: 1.1;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.socmed i {
+  font-size: 1.5rem;
+  color: #708090;
+}
+
+.socmed i:hover {
+  color: white;
+}
+
+.socmed a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul {
+  width: 80%;
+  max-width: 40rem;
+}
+
+ul.links li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(7, 88, 142);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 8px 10px 0 #0f0f25;
+  border: 2px solid rgb(7, 88, 142);
+}
+
+.card-link:hover {
+  border: 2px solid white;
+}
+
+.links .link-icon {
+  background-image: linear-gradient(to top, #8508b3, #4615f8);
+  padding: 0.5rem;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links .link-icon i {
+  color: white;
+}
+.action-link {
+  color: #708090;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.copyright {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #708090;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+}
+
+#toast {
+  width: max-content;
+  position: fixed;
+  top: 0;
+}
+
+.toast-container {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+  animation: hilang 1s ease-in-out 1s;
+}
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hilang {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
